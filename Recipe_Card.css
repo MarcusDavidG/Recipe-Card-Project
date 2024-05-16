@@ -1,41 +1,67 @@
+/* Recipe_Card.css */
+
 body {
   font-family: Arial, sans-serif;
+  background-color: #fff8e1; /* Creamy White */
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
 }
 
 .recipe-card {
   max-width: 600px;
   margin: 50px auto;
-  background-color: #fff;
+  background-image: url("/arvid-skywalker-aGhS-JQMB_g-unsplash.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+  background-size: cover; /* This property ensures that the background image covers the entire element */
+  background-position: center; /* This property centers the background image */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.recipe-card img {
+#recipe-image {
+  display: block;
+  margin: 0 auto;
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
-.recipe-card h2 {
-  font-size: 24px;
+h2 {
+  color: #ffa07a; /* Chocolate Brown */
+  text-align: center;
+}
+
+h3 {
+  color: #ffa07a; /* Salmon */
+}
+
+ul#ingredients-list {
+  color: #ffa07a; /* Olive Green */
+  padding-left: 20px;
+}
+
+ol#instructions-list {
+  color: #ffa07a; /* Olive Green */
+  padding-left: 20px;
+}
+
+li {
   margin-bottom: 10px;
 }
 
-.recipe-card h3 {
-  font-size: 18px;
+#ingredients-list li::before {
+  content: "•";
+  color: #556b2f; /* Olive Green */
+  margin-right: 5px;
+}
+
+#instructions-list li {
+  counter-increment: steps;
   margin-bottom: 10px;
 }
 
-.recipe-card ul, .recipe-card ol {
-  margin-bottom: 20px;
+#instructions-list li::before {
+  content: counter(steps);
+  color: #556b2f; /* Olive Green */
+  margin-right: 5px;
+  font-weight: bold;
 }
-
-.recipe-card li {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
